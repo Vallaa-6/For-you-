@@ -356,6 +356,55 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
+        /* --- GAYA BARU: CONTAINER KARTU REMI --- */
+        .playing-cards-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            width: 90%;
+            opacity: 0;
+            animation: fadeInElement 1.5s ease-out forwards;
+            animation-delay: 5.4s; /* Muncul setelah wishes-box selesai fade in */
+            z-index: 10;
+        }
+
+        .card-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 5px;
+            width: 90px; /* Lebar proporsional kartu remi */
+            height: 135px; /* Tinggi proporsional kartu remi */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Efek interaktif ketika kartu disorot */
+        .card-item:hover {
+            transform: translateY(-12px) rotate(2deg);
+            box-shadow: 0 15px 30px rgba(255, 105, 180, 0.4);
+            border-color: #ff69b4;
+        }
+
+        /* Memberikan sedikit rotasi acak default agar terlihat natural berserakan halus */
+        .card-item:nth-child(odd) { transform: rotate(-2deg); }
+        .card-item:nth-child(even) { transform: rotate(3deg); }
+
+        .card-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            display: block;
+        }
+
         /* --- SISTEM LETUPAN KERTAS DENSE --- */
         .confetti-container {
             position: fixed;
@@ -492,7 +541,7 @@
 
     <div class="container">
         <h1>Selamat Ulang Tahun!🤭
-         <div>(02-06-2026)</div>
+          <div>(02-06-2026)</div>
         </h1>
 
         <div class="cake-wrapper">
@@ -509,17 +558,35 @@
         <div class="photo-gallery">
             <div class="polaroid">
                 <img src="gambar_2.jpeg" alt="Foto Polaroid 1">
-                <div class="caption">✨ Semangat MABA UI Kriminologi</div>
+                <div class="caption">✨ MABA UI Kriminologi ✨</div>
             </div>
             <div class="polaroid">
                 <img src="gambar_1.jpeg" alt="Foto Polaroid 2">
-                <div class="caption">🤍 From me to you</div>
+                <div class="caption">🤍-Form me-❤️</div>
             </div>
         </div>
 
         <div class="wishes-box">
             <h3>Pesan & Doa Spesial 🎂</h3>
-            <p>Selamat yaa buat hari ini, meskipun cuma ucapan yang sederhana dan hanya ini yang ku bisa buat kasih ke kamu. Makasihh udah mau nerima hadiah hadiah ku sama pengertian ke aku jugaa selama ini, semoga kamu nantinya di sana atau di manapun di mudahkan dan juga di berikan orang orang yang bisa suport kamu buat terus berkembang dan meraih mimpi mu, sama jangan lupa buat tetep sholat dan ingat orang tau selamnya kalau bisa muali sekarang juga rutin olahraga yaa. Makasihh DENISA 🤍</p>
+            <p>Selamat yaa buat hari ini, meskipun cuma ucapan yang sederhana dan hanya ini yang ku bisa buat kasih ke kamu. Makasihh udah mau nerima hadiah hadiah ku sama pengertian ke aku jugaa selama ini, semoga kamu nantinya di sana atau di manapun di mudahkan dan juga di berikan orang orang yang bisa support kamu buat terus berkembang dan meraih mimpi mu, sama jangan lupa buat tetep sholat dan ingat keluargamu selamnya. Kalau bisa untuk dirimu sendiri jaga kesehatan yaa. Makasihh DENISA 🤍</p>
+        </div>
+
+        <div class="playing-cards-container">
+            <div class="card-item">
+                <img src="KARTU_1.jpeg" alt="Kartu Remi 1">
+            </div>
+            <div class="card-item">
+                <img src="KARTU_2.jpeg" alt="Kartu Remi 2">
+            </div>
+            <div class="card-item">
+                <img src="KARTU_3.jpeg" alt="Kartu Remi 3">
+            </div>
+            <div class="card-item">
+                <img src="KARTU_4.jpeg" alt="Kartu Remi 4">
+            </div>
+            <div class="card-item">
+                <img src="KARTU_5.jpeg" alt="Kartu Remi 5">
+            </div>
         </div>
     </div>
 
